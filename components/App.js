@@ -22,7 +22,7 @@ App = React.createClass({
       },
 
       getGif: function(searchingText, callback) {
-        var url = '/v1/gifs/random?api_tag=' + searchingText;
+        var url = 'http://api.giphy.com' + '/v1/gifs/random?api_key=' + 'dc6zaTOxFJmzC' + '&tag=' + searchingText;
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url);
         xhr.onload = function() {
